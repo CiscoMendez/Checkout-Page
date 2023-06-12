@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Checkout</title>
+</head>
+
+<body>
+    <main>
+      <div class="main-container">
+            <!--Form checkout-->
+            <div class="form-details">
+                <h1>Checkout</h1>
+                <form action="/index.html" method="POST">
+                    <div class="contactInfo-container">
+                        <h3>Contact Information</h3>
+                        <div class="input-containter">
+                            <label for="email"> E-mail</label>
+                            <div class="input-field">
+                                <i class="fa fa-envelope icon"></i>
+                                <input type="text" name="email" id="email" placeholder="Enter your email...">
+                            </div>
+                        </div>
+                        <div class="input-containter">
+                            <label for="phone">Phone</label>
+                            <div class="input-field">
+                                <i class="fa fa-phone icon"></i>
+                                <input type="text" inputmode="tel" name="phone" id="phone" placeholder="Enter your phone...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shInfo-container">
+                        <h3>Shipping address </h3>
+                        <div class="input-containter">
+                            <label for="name">Full name</label>
+                            <div class="input-field">
+                                <i class="fa fa-user-circle icon"></i>
+                                <input type="text" name="name" id="name" placeholder="Your name...">
+                            </div>
+                        </div>
+                        <div class="input-containter">
+                            <label for="address">Address</label>
+                            <div class="input-field">
+                                <i class="fa fa-home icon"></i>
+                                <input type="text" name="address" id="address" placeholder="Your address">
+                            </div>
+                        </div>
+                        <div class="input-containter">
+                            <label for="city">City</label>
+                            <div class="input-field">
+                                <i class="fa fa-building icon"></i>
+                                <input type="text" name="city" id="city" placeholder="Your city...">
+                            </div>
+                        </div>
+                        <div class="location-container">
+                            <div class="input-containter">
+                                <label for="country">Country</label>
+                                <div class="input-field">
+                                    <i class="fa fa-globe icon"></i>
+                                    <input type="text" name="country" id="country" placeholder="Your Contry...">
+                                </div>
+                            </div>
+                            <div class="input-containter" style="margin-left: 1.5rem;">
+                                <label for="postalCode">Postal code</label>
+                                <div class="input-field">
+                                    <i class="fa fa-map-pin icon"></i>
+                                    <input type="text" inputmode="numeric" name="postalCode" id="postalCode" placeholder="Your postal code...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-containter">
+                            <input type="checkbox" name="saveInfo" id="saveInfo">
+                            <label for="saveInfo">Save this information for next time</label>
+                        </div>
+                    </div>
+                </form>
+                <div class="btn">
+                    <input type="button" value="Continue">
+                </div>
+                
+            </div>
+
+
+            <!--Second Section-->
+            <div class="car-checkout">
+                <div class="car-items">
+                    <div class="item-container">
+                        <img src="/src/img1.jpeg" alt="Bag">
+                        <div class="item-info">
+                            <h4>Vintage Backbag</h4>
+                            <div class="item-price">
+                                <p>$54.99</p>
+                                <p>$94.99</p>
+                            </div>
+                        </div>
+                        <div class="add-item">
+                            <input type="button" value="-">
+                            <span>1</span>
+                            <input type="button" value="+">
+                        </div>
+                    </div>
+                    <div class="item-container">
+                        <img src="/src/img2.jpeg" alt="Shoes">
+                        <div class="item-info">
+                            <h4>Levi Shoes</h4>
+                            <div class="item-price">
+                                <p>$74.99</p>
+                                <p>$124.99</p>
+                            </div>
+                            
+                        </div>
+                        <div class="add-item">
+                            <input type="button" value="-">
+                            <span>1</span>
+                            <input type="button" value="+">
+                        </div>
+                    </div>
+                </div>
+                <div class="amounts-details">
+                    <div class="shipping-detail">
+                        <h3>Shipping</h3>
+                        <p>$19</p>
+                    </div>
+                    <div class="total-detail">
+                        <h3>Total</h3>
+                        <p>$148.98</p>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </main>
+</body>
+
+</html>
