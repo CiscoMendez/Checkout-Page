@@ -1,45 +1,61 @@
 /* Montserrat Regular */
-@font-face{
-    font-family:Montserrat;
-    font-style:normal;
-    font-weight:400;
-    src: url('../src/Fonts/Montserrat-Regular.woff') format('woff');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.material-icons{
+    line-height: unset !important;
 }
  /* Elementos HTML */   
 html {
- font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 h1{
     color: #4E5150;
+    font-weight: 600;
 }
 h3{
     margin: 0.75rem 0rem;
+    font-weight: 500;
+    font-size: 1.125rem ;
 }
 h4{
     margin: 0px;
+    font-weight: 500;
 }
 p{
     margin-top: 0.375rem;
     margin-bottom: 0.375rem;
 }
-main{
-    display: flex !important;
-    flex-direction: column;
-    align-items: stretch;
-}
 
 /* Clases principales */
-.main-container{
-    display: inline-flex;
-    
-    justify-content: space-evenly;
+.checkout-header{
+    max-width: 961px;
+    margin: auto;
 }
+
+.checkout-container{
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    max-width: 961px;
+    justify-content: space-between;
+}
+@media (width <= 980px) {
+    .checkout-container {
+        flex-direction: column-reverse;
+    }
+    .car-checkout{
+        top: 10px !important;
+    }
+  }
 
 /* Clases Formulario */
 .form-details{
     display: flex;
     flex-direction: column;
-    max-width: 31rem;
+    max-width: 29rem;
     margin-bottom: 7rem;
 }
 .shInfo-container{
@@ -50,45 +66,47 @@ contactInfo-container{
     margin-top: 3.6rem;
 }
 .input-field{
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
 }
 .input-containter{
-    margin-top: 1.25rem;
+    margin-top: 1rem;
 }
 .input-containter > label{
     color: #4F4F4F;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 12px;
     line-height: 15px;
 }
 .input-field > input{
+    font-weight: 500;
     border: 1px solid #828282;
     border-radius: 0.75rem;
     max-height: 3.5rem;
     font-size: 1rem;
     padding:1rem;
-    padding-left: 2.3rem;
+    padding-left: 3rem;
     
 }
 .icon {
     color:#828282;
-    padding: 0.8rem;
-    padding-top: 1.1rem;
-    min-width: 40px;
-    position: absolute;
+    padding: 0.75rem;
+    position: absolute !important;
 }
 
 .location-container{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: minmax(217px, 1fr)minmax(217px, 1fr);
+    gap: 2rem;
 }
 .btn{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-end;
+    
 }
 .btn > input{
     background-color: #F2994A;
@@ -96,13 +114,14 @@ contactInfo-container{
     padding: 1rem 3rem;
     border-radius: 0.75rem;
     border: none;
+    cursor: pointer;
+
 }
 
 /* Clases Carrito*/
 .car-checkout{
-    position: -webkit-sticky;
-  position: sticky;
-  top: 6.3rem;
+    position: relative;
+    top: 3.5rem;
     max-width: 383px;
     max-height: 535px;
     background-color: #F2F2F2;
@@ -112,21 +131,30 @@ contactInfo-container{
     border-radius: 0.8rem;
 }
 
-.item-container{
+.product-container{
     color: #4E5150;
+    
     display: flex;
-    flex-direction: column;
-    margin-top: 2rem;
-    margin-right: 4rem;
+    flex-direction: row;
+    padding: 2rem;
+    justify-content: flex-start;
 
 }
-.item-container .item-info {
-    margin-left: 175px;
+.item-content{
+    Display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    min-width: 8.39rem;
+}
+.product-container .item-info {
+    
 }
 
 .item-price{
     display: inline-flex;
     align-items: center;
+    font-weight: 500;
 }
 .item-price > p:first-child{
     color: #F2994A;
@@ -137,29 +165,29 @@ contactInfo-container{
     padding-left: 0.5rem;
 }
 
-.item-container .add-item{
-    margin-left: 10.98rem;
-    margin-top: 2.9rem;
+.product-container .add-item{
     display: inline-flex;
     align-items: center;
-    border: solid #828282;
+    border: solid 1px #828282;
     justify-content: space-evenly;
     border-radius: 0.75rem;
+    max-width: 8.39rem;
 }
-.item-container > img{
-    position: absolute;
-    max-width: 10.93rem;
-    max-height: 136.27px;
+.product-link > img{
+    object-fit: cover;   
+    width: 10.93rem;
+    height: 136.27px;
     border-radius: 0.8rem;
-    clip-path: inset(0 16% 0 16% round 0.8rem);
-
+    clip-path: inset(0 11.45% 0 0 round 0.8rem);
+    vertical-align: top;
 
 }
 .amounts-details{
+    font-size: 14px;
     display: flex;
     flex-direction: column;
     
-    padding: 1.5rem;
+    padding: 1rem 2rem;
 }
 .shipping-detail{
     border-top: solid 1px #BDBDBD;
@@ -168,6 +196,7 @@ contactInfo-container{
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .total-detail{
     display: inline-flex;
@@ -175,15 +204,18 @@ contactInfo-container{
     align-items: center;
 }
 
-.add-item input:nth-child(2n+1){
+.add-item > button{
     background-color: #E0E0E0;
     color: #828282;
     border: none;
     border-radius: 0.25rem;
+    cursor: pointer;
+    padding: 0px 2px;
 
 }
-.add-item span:nth-child(2n){
+.add-item >span{
     background-color: #F2F2F2;
+    font-weight: 600;
     border-radius: 0.75rem;
     padding: 1rem 1rem;
     border: none;
