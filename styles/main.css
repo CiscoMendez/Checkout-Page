@@ -28,9 +28,11 @@ p{
 }
 
 /* Clases principales */
+
 .checkout-header{
-    max-width: 961px;
-    margin: auto;
+    margin: 4rem auto 0 auto;
+    padding: 0 0.8125rem 0 0.8125rem;
+
 }
 
 .checkout-container{
@@ -39,23 +41,20 @@ p{
     left: 0;
     margin: auto;
     display: flex;
-    max-width: 961px;
+    flex-direction: column-reverse;
+    padding: 0 0.8125rem 0 0.8125rem;
     justify-content: space-between;
 }
-@media (width <= 980px) {
-    .checkout-container {
-        flex-direction: column-reverse;
-    }
-    .car-checkout{
-        top: 10px !important;
-    }
-  }
+
+  
+
 
 /* Clases Formulario */
 .form-details{
     display: flex;
     flex-direction: column;
-    max-width: 29rem;
+    
+    margin-top: 1.68rem;
     margin-bottom: 7rem;
 }
 .shInfo-container{
@@ -83,13 +82,21 @@ contactInfo-container{
 .input-field > input{
     font-weight: 500;
     border: 1px solid #828282;
-    border-radius: 0.75rem;
+    border-radius: 0.8125rem;
     max-height: 3.5rem;
     font-size: 1rem;
     padding:1rem;
     padding-left: 3rem;
     
 }
+
+.input-field >input:focus{
+    border-color: #F2994A;
+    box-shadow: rgba(242, 153, 74, 0.25) 0px 1px 1px, rgba(242, 153, 88, 0.13) 0px 0px 1px 1px;
+    outline: 0 none;
+    
+}
+
 .icon {
     color:#828282;
     padding: 0.75rem;
@@ -98,7 +105,7 @@ contactInfo-container{
 
 .location-container{
     display: grid;
-    grid-template-columns: minmax(217px, 1fr)minmax(217px, 1fr);
+    grid-template-columns: minmax(160px, 1fr)minmax(160px, 1fr);
     gap: 2rem;
 }
 .btn{
@@ -112,23 +119,93 @@ contactInfo-container{
     background-color: #F2994A;
     color: #ffffff;
     padding: 1rem 3rem;
-    border-radius: 0.75rem;
+    border-radius: 0.8125rem;
     border: none;
     cursor: pointer;
 
 }
+.btn:hover > input {
+    background-color: #F9B986;
+}
+
+.btn:active > input {
+    background-color: #DC8B43;
+}
+
+.check-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0 0.5rem 2rem;
+    margin: 1.25rem 0;
+    cursor: pointer;
+    font-size: 12px;
+    user-select: none;
+  }
+.checkmark {
+    position: absolute;
+    left: 0;
+    border: 1px solid #828282;
+    border-radius: 0.25rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #ffffff;
+
+  }
+
+  .check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .check-container:hover input ~ .checkmark {
+    background-color: #F2F2F2;
+  }
+  
+  .check-container input:checked ~ .checkmark {
+    background-color: #F2994A;
+  }
+  
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  
+  .check-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+ 
+  .check-container .checkmark:after {
+    left: 5.6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  
 
 /* Clases Carrito*/
 .car-checkout{
-    position: relative;
-    top: 3.5rem;
-    max-width: 383px;
+    margin-top: 1rem;
+    
     max-height: 535px;
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
     justify-content: space-between ;
-    border-radius: 0.8rem;
+    border-radius: 0.8125rem;
 }
 
 .product-container{
@@ -136,7 +213,7 @@ contactInfo-container{
     
     display: flex;
     flex-direction: row;
-    padding: 2rem;
+    padding: 2rem 3.97rem 0rem 1.8125rem;
     justify-content: flex-start;
 
 }
@@ -175,10 +252,10 @@ contactInfo-container{
 }
 .product-link > img{
     object-fit: cover;   
-    width: 10.93rem;
-    height: 136.27px;
-    border-radius: 0.8rem;
-    clip-path: inset(0 11.45% 0 0 round 0.8rem);
+    height: 124.64px;
+    width: 122.75px;
+    border-radius: 0.8125rem;
+    margin-right: 1.2rem;
     vertical-align: top;
 
 }
@@ -187,7 +264,7 @@ contactInfo-container{
     display: flex;
     flex-direction: column;
     
-    padding: 1rem 2rem;
+    padding: 1rem 1.8125rem;
 }
 .shipping-detail{
     border-top: solid 1px #BDBDBD;
@@ -213,10 +290,49 @@ contactInfo-container{
     padding: 0px 2px;
 
 }
+
+.add-item > button:hover{
+    color: #ffffff;
+    background-color: #F2994A;
+}
+.add-item > button:active{
+    
+    background-color: #DC8B43;
+}
+
 .add-item >span{
     background-color: #F2F2F2;
     font-weight: 600;
-    border-radius: 0.75rem;
+    border-radius: 0.8125rem;
     padding: 1rem 1rem;
     border: none;
 }
+@media only screen and (max-width: 600px) {
+    html{
+        font-size: 0.78em;
+    }
+    .check-container .checkmark:after {
+        left: 4px;
+        top: 1px;
+      }
+}
+
+@media only screen and (min-width: 992px) {
+    .checkout-header{
+        margin: 4rem auto 0 auto;
+        max-width: 60rem;
+    }
+    .checkout-container {
+        flex-direction: row;
+        max-width: 60rem;
+    }
+    .form-details{
+        margin-top: 1rem;
+        max-width: 29rem;
+        
+    }
+    .car-checkout{
+        margin-top: 2.25rem;
+        max-width: 23.93rem;
+    }
+  }
