@@ -234,7 +234,9 @@ contactInfo-container{
     justify-content: space-between ;
     border-radius: 0.8125rem;
 }
-
+.car-items{
+    margin-bottom: 5.5rem;
+}
 .product-container{
     color: #4E5150;
     
@@ -377,6 +379,7 @@ contactInfo-container{
     .car-checkout{
         margin-top: 2.25rem;
         margin-left: 113px;
-        max-width: 23.93rem;
+        max-width: 23.9
+        3rem;
     }
   }
