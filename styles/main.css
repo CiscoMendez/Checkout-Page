@@ -104,6 +104,7 @@ contactInfo-container{
     line-height: 15px;
 }
 .input-field > input{
+    font-size: 16px;
     font-weight: 500;
     border: 1px solid #828282;
     border-radius: 0.8125rem;
