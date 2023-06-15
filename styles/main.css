@@ -1,5 +1,5 @@
 /* Montserrat Regular */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 
 .material-icons{
     line-height: unset !important;
@@ -9,6 +9,14 @@ html {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
+
+footer{
+    color: #BDBDBD;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 2rem;
+}
+
 h1{
     color: #4E5150;
     font-weight: 600;
@@ -29,21 +37,35 @@ p{
 
 /* Clases principales */
 
+.main-container{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    
+    
+}
+
 .checkout-header{
+    width: 100%;
     margin: 4rem auto 0 auto;
     padding: 0 0.8125rem 0 0.8125rem;
 
 }
 
 .checkout-container{
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin: auto;
+   
+    margin: 0 auto;
     display: flex;
     flex-direction: column-reverse;
     padding: 0 0.8125rem 0 0.8125rem;
     justify-content: space-between;
+}
+
+.author-containter{
+    display: flex;
+    justify-content: center;
 }
 
   
@@ -65,6 +87,7 @@ contactInfo-container{
     margin-top: 3.6rem;
 }
 .input-field{
+    position: relative;
     margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -113,6 +136,9 @@ contactInfo-container{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: flex-end;
+    user-select: none;
+    transition: all 200ms;
+    touch-action: manipulation;
     
 }
 .btn > input{
@@ -288,6 +314,9 @@ contactInfo-container{
     border-radius: 0.25rem;
     cursor: pointer;
     padding: 0px 2px;
+    user-select: none;
+    transition: all 200ms;
+    touch-action: manipulation;
 
 }
 
@@ -311,20 +340,33 @@ contactInfo-container{
     html{
         font-size: 0.78em;
     }
+    .col-s{
+        max-width: 24.36rem;
+    }
     .check-container .checkmark:after {
         left: 4px;
         top: 1px;
       }
 }
 
+@media only screen and (min-width: 600px) {
+    .col-m{
+        max-width: 31.125rem;
+    }
+}
+
 @media only screen and (min-width: 992px) {
+    .col-lg{
+        max-width: 60rem;
+    }
+
     .checkout-header{
         margin: 4rem auto 0 auto;
-        max-width: 60rem;
+        
     }
     .checkout-container {
         flex-direction: row;
-        max-width: 60rem;
+        
     }
     .form-details{
         margin-top: 1rem;
@@ -333,6 +375,7 @@ contactInfo-container{
     }
     .car-checkout{
         margin-top: 2.25rem;
+        margin-left: 113px;
         max-width: 23.93rem;
     }
   }
